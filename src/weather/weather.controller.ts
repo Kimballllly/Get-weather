@@ -11,8 +11,7 @@ export class WeatherController {
   }
 
   @Get('latlon/:lat/:lon')
-async getWeatherByLatLon(@Param('lat') lat: string, @Param('lon') lon: string) {
-  return this.weatherService.getWeatherByLatLon(lat, lon);
-}
-
+  async getWeatherByLatLon(@Param('lat') lat: string, @Param('lon') lon: string) {
+    return this.weatherService.getWeatherByLatLon(lat, lon);
+  }
 }
