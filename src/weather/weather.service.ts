@@ -58,4 +58,23 @@ export class WeatherService {
       );
     }
   }
+
+
+  async getWeatherByLatLon(lat: string, lon: string) {
+    try {
+      const response = await axios.get(
+        `https://${this.apiHost}/city/latlon/${lat}/${lon}`,
+        {
+          headers: {
+            'X-Rapidapi-Key': this.apiKey,
+            'X-Rapidapi-Host': this.apiHost,
+          },
+        },
+      );
+      return response.data;
+    } catch (error) {
+      throw new HttpException('Error fetching weather data', HttpStatus.BAD_REQUEST);
+    }
+  }
+  
 }
