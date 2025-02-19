@@ -6,7 +6,7 @@ async function bootstrap() {
 
   // ✅ Enable CORS for your frontend
   app.enableCors({
-    origin: 'https://Kimballllly.github.io/weather-frontend', // Frontend URL
+    origin: 'https://Kimballllly.github.io/Get-weather-frontend', // Frontend URL
     methods: 'GET,POST,PUT,DELETE,OPTIONS',
     credentials: true,
   });
